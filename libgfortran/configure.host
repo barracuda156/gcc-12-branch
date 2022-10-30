@@ -62,6 +62,14 @@ case "${host_cpu}" in
         ;;
     esac
 
+  powerpc | powerpc64)
+    case "${host_os}" in
+      darwin*)
+        fpu_host='fpu-ppc'
+        ieee_support='yes'
+        ;;
+    esac
+
 esac
 
 # Some targets require additional compiler options for NaN/Inf.
